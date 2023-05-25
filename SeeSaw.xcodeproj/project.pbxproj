@@ -606,7 +606,7 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		51A1E5B72A0E037600404E11 /* DTO */ = {
+		51A1E5B72A0E037600404E11 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				511AA1D82A100A4700DAF26A /* PostLogin.swift */,
@@ -623,7 +623,7 @@
 				BEC54BC42A1E196E00C455DF /* GetRegularReviewResponse.swift */,
 				BEC54BC62A1E1A2700C455DF /* GetProjectDetailInfoResponse.swift */,
 			);
-			path = DTO;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		51A1E5C02A0EA82600404E11 /* Dashboard */ = {
@@ -693,7 +693,7 @@
 				5175EAC829F277040092FE9D /* Info.plist */,
 				51F878E029F26D600077A6C7 /* SeeSaw.entitlements */,
 				51F878D829F268250077A6C7 /* Service */,
-				51A1E5B72A0E037600404E11 /* DTO */,
+				51A1E5B72A0E037600404E11 /* Model */,
 				51F878D229F268030077A6C7 /* Main */,
 				51CECB7629EE5708001C7832 /* Extensions */,
 				51BA2A5E29EA8C5500071264 /* SeeSawApp.swift */,
