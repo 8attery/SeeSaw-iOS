@@ -643,7 +643,7 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		51A1E5B72A0E037600404E11 /* Model */ = {
+		51A1E5B72A0E037600404E11 /* Mod */ = {
 			isa = PBXGroup;
 			children = (
 				513297C62A1F6B94003F6852 /* Onboarding */,
@@ -653,7 +653,7 @@
 				510B32D82A19492900026E07 /* PutNicknameResponse.swift */,
 				510B32DA2A1950EB00026E07 /* GetUserHistoryResponse.swift */,
 			);
-			path = Model;
+			path = Mod;
 			sourceTree = "<group>";
 		};
 		51A1E5C02A0EA82600404E11 /* Dashboard */ = {
@@ -723,7 +723,7 @@
 				5175EAC829F277040092FE9D /* Info.plist */,
 				51F878E029F26D600077A6C7 /* SeeSaw.entitlements */,
 				51F878D829F268250077A6C7 /* Service */,
-				51A1E5B72A0E037600404E11 /* Model */,
+				51A1E5B72A0E037600404E11 /* Mod */,
 				51F878D229F268030077A6C7 /* Main */,
 				51CECB7629EE5708001C7832 /* Extensions */,
 				51BA2A5E29EA8C5500071264 /* SeeSawApp.swift */,
