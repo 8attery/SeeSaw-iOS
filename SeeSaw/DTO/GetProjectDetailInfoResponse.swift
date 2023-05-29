@@ -24,9 +24,9 @@ struct ProjectDetailInfo: Codable, Hashable {
     var endedAt: String = ""
     var progressRate: Double = 0.0
     var isHalfProgressed: Bool = false
-    var middleRemembranceId: Int? = nil
+    var middleRemembranceId: Int?
     var isFinished: Bool = false
-    var finalRemembranceId: Int? = nil
+    var finalRemembranceId: Int?
     var isProjectReport: Bool = false
     var valueId: Int = 0
     var valueName: String = ""

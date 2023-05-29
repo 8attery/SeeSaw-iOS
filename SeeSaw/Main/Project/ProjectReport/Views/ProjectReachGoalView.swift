@@ -13,35 +13,44 @@ struct ProjectReachGoalView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text("목표와 가치에 이만큼\n다가갔어요")
-                .font(.system(size: 24))
-                .fontWeight(.heavy)
+                .font(.ssHeading2)
                 .foregroundColor(.Gray900)
                 .lineSpacing(6)
+                .padding(.bottom, 20)
+            
             Image("GoalProgressView")
                 .resizable()
-                .frame(width: 243, height: 21)
-                .padding(.vertical, 20)
-            Text("중간 회고")
-                .font(.ssWhiteBody2)
-                .foregroundColor(.Gray400)
-                .padding(.bottom, 8)
-            Text(middleReview)
-                .font(.ssBlackBody3)
-                .foregroundColor(.Gray700)
+                .frame(height: 21)
+                .padding(.bottom, 32)
+            
+            VStack(alignment: .leading, spacing: 8) {
+                Text("중간 회고")
+                    .font(.ssWhiteBody2)
+                    .foregroundColor(.Gray400)
+                Text(middleReview)
+                    .font(.ssBlackBody3)
+                    .foregroundColor(.Gray700)
+                    .lineSpacing(2)
+            }
+            .padding(.bottom, 40)
+            
+            VStack(alignment: .leading, spacing: 8) {
+                Text("마지막 회고")
+                    .font(.ssWhiteBody2)
+                    .foregroundColor(.Gray400)
+                Text(finalReview)
+                    .font(.ssBlackBody3)
+                    .foregroundColor(.Gray700)
+                    .lineSpacing(2)
+            }
+            
+            HStack {
+                Spacer()
+            }
+            
             Spacer()
-                .frame(height: 65)
-            Text("마지막 회고")
-                .font(.ssWhiteBody2)
-                .foregroundColor(.Gray400)
-                .padding(.bottom, 8)
-            Text(finalReview)
-                .font(.ssBlackBody3)
-                .foregroundColor(.Gray700)
-            Spacer()
-                .frame(width: 250)
         }
         .padding(24)
-        .frame(height: 550)
         .background(Color.Gray100)
     }
 }

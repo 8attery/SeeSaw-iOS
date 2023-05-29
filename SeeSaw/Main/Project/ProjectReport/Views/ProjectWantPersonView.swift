@@ -14,37 +14,45 @@ struct ProjectWantPersonView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text("프로젝트를 통해\n\(nickname)님은\n이런 사람이 되고 싶었고,")
-                .font(.system(size: 24))
-                .fontWeight(.heavy)
+                .font(.ssHeading2)
                 .foregroundColor(.Gray900)
                 .lineSpacing(6)
-                .padding(.bottom, 12)
-            Text("중간 회고")
-                .font(.ssWhiteBody2)
-                .foregroundColor(.Gray400)
-                .padding(.bottom, 8)
-            Text(middleReview)
-                .font(.ssBlackBody3)
-                .foregroundColor(.Gray700)
-            Spacer()
-                .frame(height: 40)
+                .padding(.bottom, 32)
+            
+            VStack(alignment: .leading, spacing: 8) {
+                Text("중간 회고")
+                    .font(.ssWhiteBody2)
+                    .foregroundColor(.Gray400)
+                Text(middleReview)
+                    .font(.ssBlackBody3)
+                    .foregroundColor(.Gray700)
+                    .lineSpacing(2)
+            }
+            .padding(.bottom, 40)
+            
             Text("이런 사람이 되었어요!")
-                .font(.system(size: 24))
-                .fontWeight(.heavy)
+                .font(.ssHeading2)
                 .foregroundColor(.Gray900)
-                .padding(.bottom, 12)
-            Text("마지막 회고")
-                .font(.ssWhiteBody2)
-                .foregroundColor(.Gray400)
-                .padding(.bottom, 8)
-            Text(finalReview)
-                .font(.ssBlackBody3)
-                .foregroundColor(.Gray700)
+                .lineSpacing(6)
+                .padding(.bottom, 32)
+            
+            VStack(alignment: .leading, spacing: 8) {
+                Text("마지막 회고")
+                    .font(.ssWhiteBody2)
+                    .foregroundColor(.Gray400)
+                Text(finalReview)
+                    .font(.ssBlackBody3)
+                    .foregroundColor(.Gray700)
+                    .lineSpacing(2)
+            }
+            
+            HStack {
+                Spacer()
+            }
+            
             Spacer()
-                .frame(width: 250)
         }
         .padding(24)
-        .frame(height: 550)
         .background(Color.Gray100)
     }
 }

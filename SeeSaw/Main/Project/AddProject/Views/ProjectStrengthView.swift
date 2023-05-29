@@ -27,9 +27,9 @@ struct ProjectStrengthView: View {
                 Slider(value: $valueStrength, in: 1...3, step: 1)
                     .onChange(of: valueStrength) { _ in
                         isStrength = true
-                        if valueStrength == 0.0 {
+                        if valueStrength < 1.2 {
                             strength = "LOW"
-                        } else if valueStrength == 1.0 {
+                        } else if valueStrength < 2.2 {
                             strength = "MEDIUM"
                         } else {
                             strength = "HIGH"

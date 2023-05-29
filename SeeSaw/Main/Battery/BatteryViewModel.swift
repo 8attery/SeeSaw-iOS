@@ -6,6 +6,7 @@
 //
 
 import Alamofire
+import Combine
 import Foundation
 import KeychainSwift
 
@@ -36,9 +37,32 @@ struct GetBatteryResponse: Codable {
     let result: BatteryInfo
 }
 
+/*
+ class DataFetcher: ObservableObject {
+     @Published var data: String = ""
+     
+     func fetchData() {
+         self.data = "Loading..."
+         
+         DispatchQueue.global().async {
+             // 비동기 작업 수행
+             // 결과를 받아와서 상태 업데이트
+             DispatchQueue.main.async {
+                 self.data = "Data Loaded"
+             }
+         }
+     }
+ }
+
+ struct ContentView: View {
+     @ObservedObject var dataFetcher = DataFetcher()
+ */
+
 class BatteryViewModel: ObservableObject {
     let keychain = KeychainSwift()
     let baseUrl = "http://\(Bundle.main.infoDictionary?["BASE_URL"] ?? "nil baseUrl")"
+    
+    @Published var isLoading: Bool = false
     
     func getBattery(completion: @escaping (BatteryInfo) -> Void) {
         let url = "\(baseUrl)/api/battery"
@@ -146,22 +170,30 @@ class BatteryViewModel: ObservableObject {
             "Authorization": "Bearer \(keychain.get("accessToken") ?? "")"
         ]
         
-        AF.request(url, method: .get, encoding: JSONEncoding.default, headers: headers)
-            .responseDecodable(of: GetMonthActivityHistory.self) { response in
-                switch response.result {
-                case .success(let res):
-                    var histories: [ActivityDayInfo] = []
-                    for data in res.result {
-                        let day = data.day
-                        let activity = data.activity
-                        let color = data.color
-                        histories.append(ActivityDayInfo(day: day, activity: activity, color: color))
+        self.isLoading = false
+        
+        DispatchQueue.global().async {
+            AF.request(url, method: .get, encoding: JSONEncoding.default, headers: headers)
+                .responseDecodable(of: GetMonthActivityHistory.self) { response in
+                    switch response.result {
+                    case .success(let res):
+                        var histories: [ActivityDayInfo] = []
+                        for data in res.result {
+                            let day = data.day
+                            let activity = data.activity
+                            let color = data.color
+                            histories.append(ActivityDayInfo(day: day, activity: activity, color: color))
+                        }
+                        completion(histories)
+                    case .failure(let error):
+                        print("DEBUG get month activity: \(error)")
                     }
-                    completion(histories)
-                case .failure(let error):
-                    print("DEBUG get month activity: \(error)")
                 }
+            
+            DispatchQueue.main.async {
+                self.isLoading = true
             }
+        }
     }
     
     func getMonthSleepHistory(year: Int, month: Int, completion: @escaping ([SleepDayInfo]) -> Void) {

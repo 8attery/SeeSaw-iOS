@@ -16,19 +16,19 @@ struct ProjectRegularRetrospectionView: View {
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         VStack(spacing: 24) {
-            HStack {
-                Spacer()
-                Button {
-                    
-                } label: {
-                    Text("편집")
-                        .foregroundColor(.Gray700)
-                        .padding(.vertical, 5)
-                        .padding(.horizontal, 28)
-                        .background(Color.Gray300)
-                        .cornerRadius(30)
-                }
-            }
+//            HStack {
+//                Spacer()
+//                Button {
+//
+//                } label: {
+//                    Text("편집")
+//                        .foregroundColor(.Gray700)
+//                        .padding(.vertical, 5)
+//                        .padding(.horizontal, 28)
+//                        .background(Color.Gray300)
+//                        .cornerRadius(30)
+//                }
+//            }
             NavigationLink(destination: AddRegularReotrspectionView(projectId: projectId)) {
                 CapsuleButtonView(color: .Gray300, text: "+", size: .large)
             }

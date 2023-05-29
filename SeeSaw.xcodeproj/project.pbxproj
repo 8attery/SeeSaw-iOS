@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		510112222A20CEB000F99429 /* BatteryDashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510112212A20CEB000F99429 /* BatteryDashboardViewModel.swift */; };
 		510B32B62A17F3AC00026E07 /* ActivityHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B32B52A17F3AC00026E07 /* ActivityHistoryView.swift */; };
 		510B32B82A17FD4800026E07 /* ActivityProgressHalfCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B32B72A17FD4800026E07 /* ActivityProgressHalfCircleView.swift */; };
 		510B32BA2A17FD5F00026E07 /* TopHalfCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B32B92A17FD5F00026E07 /* TopHalfCircle.swift */; };
@@ -172,6 +173,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		510112212A20CEB000F99429 /* BatteryDashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryDashboardViewModel.swift; sourceTree = "<group>"; };
 		510B32B52A17F3AC00026E07 /* ActivityHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityHistoryView.swift; sourceTree = "<group>"; };
 		510B32B72A17FD4800026E07 /* ActivityProgressHalfCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityProgressHalfCircleView.swift; sourceTree = "<group>"; };
 		510B32B92A17FD5F00026E07 /* TopHalfCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHalfCircle.swift; sourceTree = "<group>"; };
@@ -408,6 +410,7 @@
 				510B32E62A1AAE2100026E07 /* SleepHistory */,
 				510B32BB2A17FF3000026E07 /* Calendar */,
 				514E4D3B2A1BD0FC0040FC88 /* BatteryViewModel.swift */,
+				510112212A20CEB000F99429 /* BatteryDashboardViewModel.swift */,
 			);
 			path = Battery;
 			sourceTree = "<group>";
@@ -1108,6 +1111,7 @@
 				51F878D729F268220077A6C7 /* Model.swift in Sources */,
 				BE7C07162A1AED3200C7D647 /* ArrowUpRightView.swift in Sources */,
 				514E4D3F2A1CB9950040FC88 /* BatteryHistoryViewModel.swift in Sources */,
+				510112222A20CEB000F99429 /* BatteryDashboardViewModel.swift in Sources */,
 				BE7C07042A1855C800C7D647 /* ProjectRegularRetrospectionView.swift in Sources */,
 				BE7C072B2A1B067100C7D647 /* ProjectEnergyView.swift in Sources */,
 				BE7C07212A1AFD7800C7D647 /* ProjectRegularAnswerTimeView.swift in Sources */,

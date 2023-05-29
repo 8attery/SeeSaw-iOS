@@ -26,7 +26,7 @@ class ProjectDetailViewModel: ObservableObject {
                     let projectDetailInfo = res.result
                     completion(projectDetailInfo)
                 case .failure(let error):
-                    print("DEBUG Api-getValues: \(error)")
+                    print("DEBUG Api-getProjectDetailInfo: \(error)")
                 }
             }
     }

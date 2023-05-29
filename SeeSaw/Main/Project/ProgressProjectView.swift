@@ -113,13 +113,20 @@ struct ProgressProjectView: View {
             .padding(.vertical, 10)
         }
         .onAppear {
-            projectVM.getProgressProject { progress in
-                progressProject = progress
-                progressNum = progress.count
-            }
-            api.getValues(year: year) { value in
-                self.valueName = value
-            }
+            fetchData()
+        }
+        .refreshable {
+            fetchData()
+        }
+    }
+    
+    func fetchData() {
+        projectVM.getProgressProject { progress in
+            progressProject = progress
+            progressNum = progress.count
+        }
+        api.getValues(year: year) { value in
+            self.valueName = value
         }
     }
     

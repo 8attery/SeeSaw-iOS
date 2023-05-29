@@ -11,56 +11,44 @@ struct ProjectFastChargeView: View {
     var value: [String] = ["희망", "성장", "끈기"]
     var valueNum: [Int] = [41, 34, 22]
     var body: some View {
-        VStack(alignment: .leading, spacing: 6) {
+        VStack(alignment: .leading, spacing: 2) {
             HStack(spacing: 0) {
                 Text("\(value[0]) 고속충전 ")
-                    .font(.system(size: 20))
-                    .fontWeight(.heavy)
                     .foregroundColor(.Gray900)
                 Text("\(valueNum[0])")
-                    .font(.system(size: 20))
-                    .fontWeight(.heavy)
                     .foregroundColor(.SeeSawBlue)
                 Text("회")
-                    .font(.system(size: 20))
-                    .fontWeight(.heavy)
                     .foregroundColor(.Gray900)
             }
             HStack(spacing: 0) {
                 Text("\(value[1]) 고속충전 ")
-                    .font(.system(size: 20))
-                    .fontWeight(.heavy)
                     .foregroundColor(.Gray900)
                 Text("\(valueNum[1])")
-                    .font(.system(size: 20))
-                    .fontWeight(.heavy)
                     .foregroundColor(.SeeSawBlue)
                 Text("회")
-                    .font(.system(size: 20))
-                    .fontWeight(.heavy)
                     .foregroundColor(.Gray900)
             }
             HStack(spacing: 0) {
                 Text("\(value[2]) 고속충전 ")
-                    .font(.system(size: 20))
-                    .fontWeight(.heavy)
                     .foregroundColor(.Gray900)
                 Text("\(valueNum[2])")
-                    .font(.system(size: 20))
-                    .fontWeight(.heavy)
                     .foregroundColor(.SeeSawBlue)
                 Text("회")
-                    .font(.system(size: 20))
-                    .fontWeight(.heavy)
                     .foregroundColor(.Gray900)
             }
-            Spacer()
-                .frame(height: 50)
+            .padding(.bottom, 48)
+            
             Image("ProjectBatteryImage")
                 .resizable()
                 .frame(width: 250, height: 350)
+            
+            HStack {
+                Spacer()
+            }
+            
             Spacer()
         }
+        .font(.ssWhiteTitle1)
         .padding(24)
         .frame(height: 550)
         .background(Color.Gray100)

@@ -45,6 +45,8 @@ struct FinalReviewQuestionView: View {
                                         Text(finalAnswerArray[index])
                                             .font(.ssBlackBody1)
                                             .foregroundColor(.Gray500)
+                                            .multilineTextAlignment(.leading)
+                                            .lineLimit(4)
                                     }
                                 }
                                 .padding(.horizontal, 16)

@@ -52,7 +52,11 @@ struct InterimReviewView: View {
                     .animation(.easeInOut(duration: 1.0).delay(2.0), value: show)
                 Spacer()
             } else {
-                InterimReviewMainView(projectTitle: self.projectTitle, interimQuestionArray: interimQuestionArray, interimAnswerArray: interimAnswerArray, questionArray: questionArray, rememberanceId: middleRemembranceId)
+                InterimReviewMainView(projectTitle: self.projectTitle,
+                                      interimQuestionArray: interimQuestionArray,
+                                      interimAnswerArray: interimAnswerArray,
+                                      questionArray: questionArray,
+                                      rememberanceId: middleRemembranceId)
             }
         }
         .onAppear {

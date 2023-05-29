@@ -68,7 +68,22 @@ struct ProjectDetailView: View {
                 .padding(.vertical, 12)
             
             //
-            ProjectRetrospectionView(emojiNum: [projectDetailInfo.likeCnt, projectDetailInfo.niceCnt, projectDetailInfo.idkCnt, projectDetailInfo.angryCnt, projectDetailInfo.sadCnt], isMiddle: projectDetailInfo.isHalfProgressed, isFinal: projectDetailInfo.isFinished, projectTitle: projectDetailInfo.projectName, projectId: projectDetailInfo.projectId, halfDate: projectDetailInfo.halfDate, endedAt: projectDetailInfo.endedAt, middleRemembranceId: projectDetailInfo.middleRemembranceId ?? 0, finalRemembranceId: projectDetailInfo.finalRemembranceId ?? 0, isMiddleRemembrance: projectDetailInfo.middleRemembranceId != nil, isFinalRemembrance: projectDetailInfo.finalRemembranceId != nil)
+            ProjectRetrospectionView(emojiNum: [projectDetailInfo.likeCnt,
+                                                projectDetailInfo.niceCnt,
+                                                projectDetailInfo.idkCnt,
+                                                projectDetailInfo.angryCnt,
+                                                projectDetailInfo.sadCnt],
+                                     isMiddle: projectDetailInfo.isHalfProgressed,
+                                     isFinal: projectDetailInfo.isFinished,
+                                     isProjectReport: projectDetailInfo.isProjectReport,
+                                     projectTitle: projectDetailInfo.projectName,
+                                     projectId: projectDetailInfo.projectId,
+                                     halfDate: projectDetailInfo.halfDate,
+                                     endedAt: projectDetailInfo.endedAt,
+                                     middleRemembranceId: projectDetailInfo.middleRemembranceId ?? 0,
+                                     finalRemembranceId: projectDetailInfo.finalRemembranceId ?? 0,
+                                     isMiddleRemembrance: projectDetailInfo.middleRemembranceId != nil,
+                                     isFinalRemembrance: projectDetailInfo.finalRemembranceId != nil)
         }
         .onAppear {
             projectDetailVM.getProjectDetailInfo(projectId: self.projectId) { project in

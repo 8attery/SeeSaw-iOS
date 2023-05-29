@@ -34,7 +34,11 @@ struct CompleteProjectView: View {
                             RoundedRectangle(cornerRadius: 12)
                                 .frame(width: UIScreen.main.bounds.size.width / 2 - 20, height: 200)
                                 .foregroundColor(.Gray300)
-                            ProjectRectangleVIew(showDeletePopUp: $showDeletePopUp, progressProject: project, isProgress: false, valueName: valueName)
+                            ProjectRectangleVIew(showDeletePopUp: $showDeletePopUp,
+                                                 progressProject: project,
+                                                 projectId: project.projectId,
+                                                 isProgress: false,
+                                                 valueName: valueName)
                         }
                     })
                 })
@@ -47,10 +51,17 @@ struct CompleteProjectView: View {
             .padding(.vertical, 10)
         }
         .onAppear {
-            projectVM.getCompleteProject { complete in
-                completeProject = complete
-                completeNum = complete.count
-            }
+            fetchData()
+        }
+        .refreshable {
+            fetchData()
+        }
+    }
+    
+    func fetchData() {
+        projectVM.getCompleteProject { complete in
+            completeProject = complete
+            completeNum = complete.count
         }
     }
 }

@@ -28,21 +28,6 @@ struct ProjectRetrospectionView: View {
     @State var projectReportInfo: ProjectReportInfo = ProjectReportInfo()
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Button {
-                isMiddle.toggle()
-            } label: {
-                Text("middleToggle")
-            }
-            Button {
-                isFinal.toggle()
-            } label: {
-                Text("finalToggle")
-            }
-            Button {
-                isProjectReport.toggle()
-            } label: {
-                Text("projectReportToggle")
-            }
             Text("프로젝트에서 느낀 감정을 자유롭게 눌러주세요")
                 .font(.ssBlackBody1)
                 .foregroundColor(.Gray900)
@@ -103,7 +88,10 @@ struct ProjectRetrospectionView: View {
                                     }
                                 )
                             if isMiddle {
-                                NavigationLink(destination: InterimReviewView(projectTitle: projectTitle, middleRemembranceId: middleRemembranceId)) {
+                                NavigationLink{
+                                    InterimReviewView(projectTitle: projectTitle,
+                                                      middleRemembranceId: middleRemembranceId)
+                                } label: {
                                     ArrowUpRightView()
                                 }
                                 .simultaneousGesture(TapGesture().onEnded {
@@ -172,14 +160,14 @@ struct ProjectRetrospectionView: View {
                                                 .frame(height: 23)
                                             Text("프로젝트\n리포트")
                                                 .font(.ssBlackTitle2)
-                                                .foregroundColor(.Gray500)
+                                                .foregroundColor(.Gray900)
                                                 .multilineTextAlignment(.center)
                                             Spacer()
                                         }
                                     }
                                 )
                             if isProjectReport {
-                                NavigationLink(destination: ProjectReportView()) {
+                                NavigationLink(destination: ProjectReportView(projectId: projectId, projectReportInfo: projectReportInfo)) {
                                     ArrowUpRightView()
                                         .offset(x: 40, y: -40)
                                 }
@@ -193,6 +181,9 @@ struct ProjectRetrospectionView: View {
         }
         .background(Color.Gray200)
         .onAppear {
+            projectDetailVM.getProjectDetailInfo(projectId: projectId) { detailInfo in
+                middleRemembranceId = detailInfo.middleRemembranceId ?? 0
+            }
             projectReportVM.getProjectReportFirst(projectId: projectId) { response in
                 projectReportInfo = response.projectReportInfoDto
             }

@@ -31,6 +31,7 @@ struct ProjectReportView: View {
     @State var count3: Int = 0
     @State var activityAvg: Int = 0
     @State var sleepAvg: Int = 0
+    
     var body: some View {
         VStack {
             TabView(selection: $selectedView) {
@@ -76,6 +77,8 @@ struct ProjectReportView: View {
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             .frame(width: 300, height: 548)
             .cornerRadius(12)
+            .padding(.bottom, 48)
+            
             HStack {
                 if selectedView > 1 {
                     Button {

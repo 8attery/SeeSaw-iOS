@@ -20,8 +20,9 @@ struct InterimReviewQuestionView: View {
             ScrollView {
                 ForEach(Array(interimQuestionArray.enumerated()), id: \.element) { index, dataItem in
                     if !questionArray.isEmpty {
-                        NavigationLink(destination: WriteInterimReviewView(questionNum: index + 1, questionTitle: dataItem, interimAnswerArray: self.$interimAnswerArray, isFullQuestion: $isFullQuestion, isFull: $isFull, disabledButton: !(interimAnswerArray[index] == ""), qnaId: questionArray[index].qnaId)) {
-                            
+                        NavigationLink {
+                            WriteInterimReviewView(questionNum: index + 1, questionTitle: dataItem, interimAnswerArray: self.$interimAnswerArray, isFullQuestion: $isFullQuestion, isFull: $isFull, disabledButton: !(interimAnswerArray[index] == ""), qnaId: questionArray[index].qnaId)
+                        } label: {
                             ZStack(alignment: .topLeading) {
                                 Rectangle()
                                     .frame(height: 180)
@@ -38,13 +39,14 @@ struct InterimReviewQuestionView: View {
                                         Text(dataItem)
                                             .font(.ssWhiteBody1)
                                             .foregroundColor(.Gray900)
-                                            .lineLimit(nil)
                                             .multilineTextAlignment(.leading)
                                             .padding(.bottom, 12)
                                         
                                         Text(interimAnswerArray[index])
                                             .font(.ssBlackBody1)
                                             .foregroundColor(.Gray500)
+                                            .multilineTextAlignment(.leading)
+                                            .lineLimit(4)
                                     }
                                 }
                                 .padding(.horizontal, 16)

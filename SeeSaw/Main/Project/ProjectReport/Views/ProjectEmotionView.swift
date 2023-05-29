@@ -13,60 +13,76 @@ struct ProjectEmotionView: View {
     var finalReview: String = "힘든 순간도 많았다. 하지만 배움의 뿌듯함을 느끼는 순간이 더 많았다! 뭔가 힘든 건 그 순간인 거 같은데 한번 새로운 지식을 배운 거는 며칠 내내 뿌듯하고 행복한 것 같다,,, 😎"
     var firstEmoji: String = "LIKE"
     var secondEmoji: String = "NICE"
-    var emojiString: [String: String] = ["LIKE": "행복", "NICE": "뿌듯함", "IDK": "아쉬움", "ANGRY": "힘듦", "SAD":"슬픔"]
+    var emojiString: [String: String] = ["LIKE": "행복", "NICE": "뿌듯함", "IDK": "아쉬움", "ANGRY": "힘듦", "SAD": "슬픔"]
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text("\(nickname)님은")
-                .font(.system(size: 24))
-                .fontWeight(.heavy)
-                .foregroundColor(.Gray900)
-                .lineSpacing(6)
-            HStack {
-                Text(emojiString[firstEmoji] ?? "")
-                    .font(.system(size: 24))
-                    .fontWeight(.heavy)
-                    .foregroundColor(.SeeSawBlue)
-                Text("과")
-                    .font(.system(size: 24))
-                    .fontWeight(.heavy)
-                    .foregroundColor(.Gray900)
-                Text(emojiString[secondEmoji] ?? "")
-                    .font(.system(size: 24))
-                    .fontWeight(.heavy)
-                    .foregroundColor(.SeeSawBlue)
-                Text("의 감정을")
+            title
+            .padding(.bottom, 28)
+            
+            VStack(alignment: .leading, spacing: 0) {
+                Text("중간 회고")
+                    .font(.ssWhiteBody2)
+                    .foregroundColor(.Gray400)
+                    .padding(.bottom, 8)
+                Text(middleReview)
+                    .font(.ssBlackBody3)
+                    .foregroundColor(.Gray700)
+                    .lineSpacing(2)
             }
-            Text("느꼈어요")
-                .padding(.bottom, 30)
-            Text("중간 회고")
-                .font(.ssWhiteBody2)
-                .foregroundColor(.Gray400)
-                .padding(.bottom, 8)
-            Text(middleReview)
-                .font(.ssBlackBody3)
-                .foregroundColor(.Gray700)
-            HStack(alignment: .bottom) {
+            .padding(.bottom, 30)
+            
+            ZStack(alignment: .bottomLeading) {
                 Text("마지막 회고")
                     .font(.ssWhiteBody2)
                     .foregroundColor(.Gray400)
-                Spacer()
-                Image(firstEmoji)
-                    .resizable()
-                    .frame(width: 100, height: 85)
+//                HStack {
+//                    Spacer()
+//                    Image(firstEmoji)
+//                        .resizable()
+//                        .frame(width: 100, height: 85)
+//                        .offset(y: -4)
+//                }
             }
             .padding(.bottom, 8)
             Text(finalReview)
                 .font(.ssBlackBody3)
                 .foregroundColor(.Gray700)
-                .padding(.bottom, 10)
-            Image(secondEmoji)
-                .resizable()
-                .frame(width: 100, height: 85)
+                .lineSpacing(2)
+                .padding(.bottom, 20)
+            HStack {
+                Spacer()
+            }
+//            Image(secondEmoji)
+//                .resizable()
+//                .frame(width: 100, height: 85)
             Spacer()
         }
         .padding(24)
         .frame(height: 550)
         .background(Color.Gray100)
+    }
+    
+    var title: some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text("\(nickname)님은")
+                .foregroundColor(.Gray900)
+                .lineSpacing(6)
+            
+            HStack {
+                Text(emojiString[firstEmoji] ?? "")
+                    .foregroundColor(.SeeSawBlue)
+                Text("과")
+                    .foregroundColor(.Gray900)
+                Text(emojiString[secondEmoji] ?? "")
+                    .foregroundColor(.SeeSawBlue)
+                Text("의 감정을")
+                    .foregroundColor(.Gray900)
+            }
+            
+            Text("느꼈어요")
+                .foregroundColor(.Gray900)
+        }
+        .font(.ssHeading2)
     }
 }
 

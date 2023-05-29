@@ -5,6 +5,7 @@
 //  Created by 이안진 on 2023/05/11.
 //
 
+import Combine
 import SwiftUI
 
 struct BatteryDashboardView: View {
@@ -29,7 +30,9 @@ struct BatteryDashboardView: View {
     @State var sleepCondition: String = "Good"
     
     private var healthStore: HealthStore?
+    @ObservedObject var batteryDashboardVM = BatteryDashboardViewModel()
     @StateObject var batteryVM = BatteryViewModel()
+    
     @AppStorage("healthAuth") var healthAuth: Bool = false
     
     init() {
@@ -47,6 +50,8 @@ struct BatteryDashboardView: View {
                             title
                                 .padding(.top, 10)
                                 .padding(.horizontal, 20)
+                            
+//                            Text("\(batteryDashboardVM.isLoading)")
                             
                             // 배터리
                             ZStack(alignment: .topTrailing) {
@@ -97,6 +102,9 @@ struct BatteryDashboardView: View {
             print("DEBUG BatteryDashoboard: onAppear")
             fetchData()
             postEnergy()
+            batteryDashboardVM.getMonthActivityHistory(year: 2023, month: 5) { isLoading, _ in
+                print("finish combine test\(isLoading)")
+            }
         }
         .refreshable {
             fetchData()
