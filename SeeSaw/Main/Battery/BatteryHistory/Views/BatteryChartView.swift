@@ -43,13 +43,19 @@ struct BatteryChartView: View {
                 
                 HStack(alignment: .bottom, spacing: 16) {
                     ForEach(sevenDaysBatteryHistory.indices, id: \.self) { index in
-                        let height = CGFloat((148 * sevenDaysBatteryHistory[index].batteryPercentage)) / 100
+                        let height = CGFloat((174 * sevenDaysBatteryHistory[index].batteryPercentage)) / 100
                         
-                        VStack {
+                        VStack(spacing: 0) {
+                            Text("\(sevenDaysBatteryHistory[index].batteryPercentage)%")
+                                .font(.ssBlackCaption)
+                                .foregroundColor(.Gray700)
+                                .padding(.bottom, 2)
+                            
                             Rectangle()
                                 .cornerRadius(90, corners: [.topLeft, .topRight])
                                 .foregroundColor(.SeeSawYellow)
                                 .frame(width: 20, height: height)
+                                .padding(.bottom, 6)
                             
                             Text(sevenDaysBatteryHistory[index].date.suffix(5))
                                 .font(.ssBlackBody4)
