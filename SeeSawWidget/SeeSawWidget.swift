@@ -5,20 +5,20 @@
 //  Created by 이안진 on 2023/06/16.
 //
 
-import WidgetKit
 import SwiftUI
+import WidgetKit
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date())
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
+    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> Void) {
         let entry = SimpleEntry(date: Date())
         completion(entry)
     }
 
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
         var entries: [SimpleEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
@@ -38,12 +38,37 @@ struct SimpleEntry: TimelineEntry {
     let date: Date
 }
 
-struct SeeSawWidgetEntryView : View {
-    var entry: Provider.Entry
+struct SeeSawWidgetEntryView: View {
+    @Environment(\.widgetFamily) private var widgetFamily
 
-    var body: some View {
-        Text(entry.date, style: .time)
-    }
+        var entry: Provider.Entry
+        
+        var body: some View {
+            switch widgetFamily {
+            case .accessoryCircular:
+                Text("wow")
+                    .font(.title)
+            case .systemSmall:
+                ZStack {
+                    Color.white
+                    VStack {
+                        Text("에너지 배터리")
+                            .bold()
+                        ZStack {
+                            Circle()
+                                .foregroundColor(.green)
+                            Text("80%")
+                                .font(.title)
+                                .bold()
+                                .foregroundColor(.white)
+                        }
+                    }
+                    .padding(20)
+                }
+            default:
+                Text("?")
+            }
+        }
 }
 
 struct SeeSawWidget: Widget {
@@ -53,8 +78,9 @@ struct SeeSawWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             SeeSawWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("SeeSaw")
+        .description("빠르게 에너지 배터리를 확인하세요")
+        .supportedFamilies([.accessoryCircular, .systemSmall])
     }
 }
 
