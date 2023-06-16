@@ -41,34 +41,31 @@ struct SimpleEntry: TimelineEntry {
 struct SeeSawWidgetEntryView: View {
     @Environment(\.widgetFamily) private var widgetFamily
 
-        var entry: Provider.Entry
-        
-        var body: some View {
-            switch widgetFamily {
-            case .accessoryCircular:
-                Text("wow")
-                    .font(.title)
-            case .systemSmall:
-                ZStack {
-                    Color.white
-                    VStack {
-                        Text("에너지 배터리")
+    var entry: Provider.Entry
+    
+    var body: some View {
+        switch widgetFamily {
+        case .systemSmall:
+            ZStack {
+                Color.white
+                VStack {
+                    Text("에너지 배터리")
+                        .bold()
+                    ZStack {
+                        Circle()
+                            .foregroundColor(Color("SeeSawGreen"))
+                        Text("80%")
+                            .font(.title)
                             .bold()
-                        ZStack {
-                            Circle()
-                                .foregroundColor(.green)
-                            Text("80%")
-                                .font(.title)
-                                .bold()
-                                .foregroundColor(.white)
-                        }
+                            .foregroundColor(.white)
                     }
-                    .padding(20)
                 }
-            default:
-                Text("?")
+                .padding(20)
             }
+        default:
+            Text("?")
         }
+    }
 }
 
 struct SeeSawWidget: Widget {
@@ -80,7 +77,7 @@ struct SeeSawWidget: Widget {
         }
         .configurationDisplayName("SeeSaw")
         .description("빠르게 에너지 배터리를 확인하세요")
-        .supportedFamilies([.accessoryCircular, .systemSmall])
+        .supportedFamilies([.systemSmall])
     }
 }
 
