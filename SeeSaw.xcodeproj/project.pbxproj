@@ -467,14 +467,9 @@
 		512C4F572A3D78F400C64F7F /* Battery */ = {
 			isa = PBXGroup;
 			children = (
-				512C4F652A3D7B4000C64F7F /* BatteryHistory */,
+				512C4F6A2A3D7C2B00C64F7F /* Main */,
 				512C4F642A3D7B1D00C64F7F /* SetGoal */,
-				512C4F582A3D792100C64F7F /* GetBattery.swift */,
-				512C4F5A2A3D798D00C64F7F /* PostEnergy.swift */,
-				512C4F5C2A3D79DB00C64F7F /* PostSleep.swift */,
-				512C4F5E2A3D7A2800C64F7F /* PostFastCharge.swift */,
-				512C4F602A3D7A6F00C64F7F /* GetMonthActivityHistory.swift */,
-				512C4F622A3D7AA600C64F7F /* GetMonthSleepHistory.swift */,
+				512C4F652A3D7B4000C64F7F /* BatteryHistory */,
 			);
 			path = Battery;
 			sourceTree = "<group>";
@@ -494,6 +489,28 @@
 				512C4F682A3D7BFD00C64F7F /* GetThirtyDaysBatteryHistory.swift */,
 			);
 			path = BatteryHistory;
+			sourceTree = "<group>";
+		};
+		512C4F6A2A3D7C2B00C64F7F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				512C4F582A3D792100C64F7F /* GetBattery.swift */,
+				512C4F5A2A3D798D00C64F7F /* PostEnergy.swift */,
+				512C4F5C2A3D79DB00C64F7F /* PostSleep.swift */,
+				512C4F5E2A3D7A2800C64F7F /* PostFastCharge.swift */,
+				512C4F602A3D7A6F00C64F7F /* GetMonthActivityHistory.swift */,
+				512C4F622A3D7AA600C64F7F /* GetMonthSleepHistory.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		512C4F6B2A3D7C6E00C64F7F /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				510B32D82A19492900026E07 /* PutNicknameResponse.swift */,
+				510B32DA2A1950EB00026E07 /* GetUserHistoryResponse.swift */,
+			);
+			path = MyPage;
 			sourceTree = "<group>";
 		};
 		51348A082A124F9D005F9163 /* SetGoal */ = {
@@ -672,14 +689,13 @@
 			isa = PBXGroup;
 			children = (
 				512C4F572A3D78F400C64F7F /* Battery */,
+				512C4F6B2A3D7C6E00C64F7F /* MyPage */,
 				511AA1D82A100A4700DAF26A /* PostLogin.swift */,
 				511AA1DA2A100A9400DAF26A /* PostRegenerate.swift */,
 				51348A062A121C4D005F9163 /* GetValues.swift */,
 				515617232A148A8000743B5F /* PostSignUp.swift */,
 				51720C8E2A15D8A2002E05AD /* PostSelectedValues.swift */,
 				51AA9A722A17C01F005C14FC /* PostBatteryVariation.swift */,
-				510B32D82A19492900026E07 /* PutNicknameResponse.swift */,
-				510B32DA2A1950EB00026E07 /* GetUserHistoryResponse.swift */,
 				51DD38F32A1B76910058E2E4 /* GetNickname.swift */,
 				BEC54BC22A1E18F900C455DF /* GetCompleteProjectResponse.swift */,
 				BEC54BC42A1E196E00C455DF /* GetRegularReviewResponse.swift */,
