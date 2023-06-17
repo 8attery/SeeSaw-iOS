@@ -194,19 +194,6 @@ class BatteryViewModel: ObservableObject {
     }
 }
 
-struct PostFastChargeResponse: Codable {
-    let isSuccess: Bool
-    let code: Int
-    let message: String
-    let result: FastChargeResult
-}
-
-struct FastChargeResult: Codable {
-    let valueId: Int
-    let chargeName: String
-    let createdAt: String
-}
-
 struct GetMonthActivityHistory: Codable {
     let isSuccess: Bool
     let code: Int
