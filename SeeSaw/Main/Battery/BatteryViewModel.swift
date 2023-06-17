@@ -10,54 +10,6 @@ import Combine
 import Foundation
 import KeychainSwift
 
-struct BatteryInfo: Codable {
-    let battery: Int
-    let fastChargeTitle: String?
-    let fastChargeValue: String?
-    let todayActivity: Int?
-    let activityGoal: Int?
-    let todaySleep: Int?
-    let sleepGoal: Int?
-    
-    private enum CodingKeys: String, CodingKey {
-        case battery = "curBattery"
-        case fastChargeTitle = "chargeName"
-        case fastChargeValue = "valueName"
-        case todayActivity = "curActivity"
-        case activityGoal = "activityGoal"
-        case todaySleep = "curSleep"
-        case sleepGoal = "sleepGoal"
-    }
-}
-
-struct GetBatteryResponse: Codable {
-    let isSuccess: Bool
-    let code: Int
-    let message: String
-    let result: BatteryInfo
-}
-
-/*
- class DataFetcher: ObservableObject {
-     @Published var data: String = ""
-     
-     func fetchData() {
-         self.data = "Loading..."
-         
-         DispatchQueue.global().async {
-             // 비동기 작업 수행
-             // 결과를 받아와서 상태 업데이트
-             DispatchQueue.main.async {
-                 self.data = "Data Loaded"
-             }
-         }
-     }
- }
-
- struct ContentView: View {
-     @ObservedObject var dataFetcher = DataFetcher()
- */
-
 class BatteryViewModel: ObservableObject {
     let keychain = KeychainSwift()
     let baseUrl = "http://\(Bundle.main.infoDictionary?["BASE_URL"] ?? "nil baseUrl")"
@@ -221,55 +173,23 @@ class BatteryViewModel: ObservableObject {
     }
 }
 
-struct PostFastChargeResponse: Codable {
-    let isSuccess: Bool
-    let code: Int
-    let message: String
-    let result: FastChargeResult
-}
+/*
+ class DataFetcher: ObservableObject {
+     @Published var data: String = ""
+     
+     func fetchData() {
+         self.data = "Loading..."
+         
+         DispatchQueue.global().async {
+             // 비동기 작업 수행
+             // 결과를 받아와서 상태 업데이트
+             DispatchQueue.main.async {
+                 self.data = "Data Loaded"
+             }
+         }
+     }
+ }
 
-struct FastChargeResult: Codable {
-    let valueId: Int
-    let chargeName: String
-    let createdAt: String
-}
-
-struct PostEnergyResponse: Codable {
-    let isSuccess: Bool
-    let code: Int
-    let message: String
-    let result: Int
-}
-
-struct PostSleepResponse: Codable {
-    let isSuccess: Bool
-    let code: Int
-    let message: String
-    let result: Int
-}
-
-struct GetMonthActivityHistory: Codable {
-    let isSuccess: Bool
-    let code: Int
-    let message: String
-    let result: [ActivityDayInfo]
-}
-
-struct ActivityDayInfo: Codable {
-    let day: Int
-    let activity: Int?
-    let color: Int?
-}
-
-struct GetMonthSleepHistory: Codable {
-    let isSuccess: Bool
-    let code: Int
-    let message: String
-    let result: [SleepDayInfo]
-}
-
-struct SleepDayInfo: Codable {
-    let day: Int
-    let sleep: Int?
-    let color: Int?
-}
+ struct ContentView: View {
+     @ObservedObject var dataFetcher = DataFetcher()
+ */

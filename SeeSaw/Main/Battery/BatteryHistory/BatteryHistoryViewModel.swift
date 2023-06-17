@@ -47,22 +47,3 @@ class BatteryHistoryViewModel: ObservableObject {
             }
     }
 }
-
-struct GetSevenDaysBatteryHistoryResponse: Codable {
-    let isSuccess: Bool
-    let code: Int
-    let message: String
-    let result: [BatteryHistory]
-}
-
-struct GetThirtyDaysBatteryHistoryResponse: Codable {
-    let isSuccess: Bool
-    let code: Int
-    let message: String
-    let result: [BatteryHistoryResponse]
-}
-
-struct BatteryHistory: Codable {
-    let date: String
-    let batteryPercentage: Int
-}

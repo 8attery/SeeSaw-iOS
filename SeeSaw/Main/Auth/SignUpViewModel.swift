@@ -9,13 +9,6 @@ import Alamofire
 import Foundation
 import KeychainSwift
 
-struct GetEmailResponse: Codable {
-    let isSuccess: Bool
-    let code: Int
-    let message: String
-    let result: String
-}
-
 class SignUpViewModel: ObservableObject {
     let keychain = KeychainSwift()
     let baseUrl = "http://\(Bundle.main.infoDictionary?["BASE_URL"] ?? "nil baseUrl")"
