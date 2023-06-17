@@ -44,6 +44,7 @@
 		512C4F5D2A3D79DB00C64F7F /* PostSleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C4F5C2A3D79DB00C64F7F /* PostSleep.swift */; };
 		512C4F5F2A3D7A2800C64F7F /* PostFastCharge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C4F5E2A3D7A2800C64F7F /* PostFastCharge.swift */; };
 		512C4F612A3D7A6F00C64F7F /* GetMonthActivityHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C4F602A3D7A6F00C64F7F /* GetMonthActivityHistory.swift */; };
+		512C4F632A3D7AA600C64F7F /* GetMonthSleepHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C4F622A3D7AA600C64F7F /* GetMonthSleepHistory.swift */; };
 		513297C42A1F58D5003F6852 /* ProjectReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513297C32A1F58D5003F6852 /* ProjectReportViewModel.swift */; };
 		51348A072A121C4D005F9163 /* GetValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51348A062A121C4D005F9163 /* GetValues.swift */; };
 		51348A0A2A1252E6005F9163 /* SetGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51348A092A1252E6005F9163 /* SetGoalViewModel.swift */; };
@@ -215,6 +216,7 @@
 		512C4F5C2A3D79DB00C64F7F /* PostSleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSleep.swift; sourceTree = "<group>"; };
 		512C4F5E2A3D7A2800C64F7F /* PostFastCharge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFastCharge.swift; sourceTree = "<group>"; };
 		512C4F602A3D7A6F00C64F7F /* GetMonthActivityHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMonthActivityHistory.swift; sourceTree = "<group>"; };
+		512C4F622A3D7AA600C64F7F /* GetMonthSleepHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMonthSleepHistory.swift; sourceTree = "<group>"; };
 		513297C32A1F58D5003F6852 /* ProjectReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectReportViewModel.swift; sourceTree = "<group>"; };
 		51348A062A121C4D005F9163 /* GetValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetValues.swift; sourceTree = "<group>"; };
 		51348A092A1252E6005F9163 /* SetGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalViewModel.swift; sourceTree = "<group>"; };
@@ -466,6 +468,7 @@
 				512C4F5C2A3D79DB00C64F7F /* PostSleep.swift */,
 				512C4F5E2A3D7A2800C64F7F /* PostFastCharge.swift */,
 				512C4F602A3D7A6F00C64F7F /* GetMonthActivityHistory.swift */,
+				512C4F622A3D7AA600C64F7F /* GetMonthSleepHistory.swift */,
 			);
 			path = Battery;
 			sourceTree = "<group>";
@@ -1103,6 +1106,7 @@
 				510B32C72A1800AF00026E07 /* DateScrollerView.swift in Sources */,
 				5121893F29F955A6005DD6C2 /* SeeSawTabView.swift in Sources */,
 				BE2D57032A1D1CFA007F0884 /* ProjectViewModel.swift in Sources */,
+				512C4F632A3D7AA600C64F7F /* GetMonthSleepHistory.swift in Sources */,
 				51AA9A732A17C01F005C14FC /* PostBatteryVariation.swift in Sources */,
 				BE7C06E62A0BAD8700C7D647 /* ProjectNameView.swift in Sources */,
 				BE7C07082A1889CA00C7D647 /* TodayQuestionView.swift in Sources */,

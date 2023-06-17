@@ -10,27 +10,6 @@ import Combine
 import Foundation
 import KeychainSwift
 
-/*
- class DataFetcher: ObservableObject {
-     @Published var data: String = ""
-     
-     func fetchData() {
-         self.data = "Loading..."
-         
-         DispatchQueue.global().async {
-             // 비동기 작업 수행
-             // 결과를 받아와서 상태 업데이트
-             DispatchQueue.main.async {
-                 self.data = "Data Loaded"
-             }
-         }
-     }
- }
-
- struct ContentView: View {
-     @ObservedObject var dataFetcher = DataFetcher()
- */
-
 class BatteryViewModel: ObservableObject {
     let keychain = KeychainSwift()
     let baseUrl = "http://\(Bundle.main.infoDictionary?["BASE_URL"] ?? "nil baseUrl")"
@@ -194,15 +173,23 @@ class BatteryViewModel: ObservableObject {
     }
 }
 
-struct GetMonthSleepHistory: Codable {
-    let isSuccess: Bool
-    let code: Int
-    let message: String
-    let result: [SleepDayInfo]
-}
+/*
+ class DataFetcher: ObservableObject {
+     @Published var data: String = ""
+     
+     func fetchData() {
+         self.data = "Loading..."
+         
+         DispatchQueue.global().async {
+             // 비동기 작업 수행
+             // 결과를 받아와서 상태 업데이트
+             DispatchQueue.main.async {
+                 self.data = "Data Loaded"
+             }
+         }
+     }
+ }
 
-struct SleepDayInfo: Codable {
-    let day: Int
-    let sleep: Int?
-    let color: Int?
-}
+ struct ContentView: View {
+     @ObservedObject var dataFetcher = DataFetcher()
+ */
