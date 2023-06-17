@@ -45,6 +45,7 @@
 		512C4F5F2A3D7A2800C64F7F /* PostFastCharge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C4F5E2A3D7A2800C64F7F /* PostFastCharge.swift */; };
 		512C4F612A3D7A6F00C64F7F /* GetMonthActivityHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C4F602A3D7A6F00C64F7F /* GetMonthActivityHistory.swift */; };
 		512C4F632A3D7AA600C64F7F /* GetMonthSleepHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C4F622A3D7AA600C64F7F /* GetMonthSleepHistory.swift */; };
+		512C4F672A3D7BB000C64F7F /* GetSevenDaysBatteryHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C4F662A3D7BB000C64F7F /* GetSevenDaysBatteryHistory.swift */; };
 		513297C42A1F58D5003F6852 /* ProjectReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513297C32A1F58D5003F6852 /* ProjectReportViewModel.swift */; };
 		51348A072A121C4D005F9163 /* GetValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51348A062A121C4D005F9163 /* GetValues.swift */; };
 		51348A0A2A1252E6005F9163 /* SetGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51348A092A1252E6005F9163 /* SetGoalViewModel.swift */; };
@@ -217,6 +218,7 @@
 		512C4F5E2A3D7A2800C64F7F /* PostFastCharge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFastCharge.swift; sourceTree = "<group>"; };
 		512C4F602A3D7A6F00C64F7F /* GetMonthActivityHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMonthActivityHistory.swift; sourceTree = "<group>"; };
 		512C4F622A3D7AA600C64F7F /* GetMonthSleepHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMonthSleepHistory.swift; sourceTree = "<group>"; };
+		512C4F662A3D7BB000C64F7F /* GetSevenDaysBatteryHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSevenDaysBatteryHistory.swift; sourceTree = "<group>"; };
 		513297C32A1F58D5003F6852 /* ProjectReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectReportViewModel.swift; sourceTree = "<group>"; };
 		51348A062A121C4D005F9163 /* GetValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetValues.swift; sourceTree = "<group>"; };
 		51348A092A1252E6005F9163 /* SetGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalViewModel.swift; sourceTree = "<group>"; };
@@ -463,6 +465,8 @@
 		512C4F572A3D78F400C64F7F /* Battery */ = {
 			isa = PBXGroup;
 			children = (
+				512C4F652A3D7B4000C64F7F /* BatteryHistory */,
+				512C4F642A3D7B1D00C64F7F /* SetGoal */,
 				512C4F582A3D792100C64F7F /* GetBattery.swift */,
 				512C4F5A2A3D798D00C64F7F /* PostEnergy.swift */,
 				512C4F5C2A3D79DB00C64F7F /* PostSleep.swift */,
@@ -471,6 +475,22 @@
 				512C4F622A3D7AA600C64F7F /* GetMonthSleepHistory.swift */,
 			);
 			path = Battery;
+			sourceTree = "<group>";
+		};
+		512C4F642A3D7B1D00C64F7F /* SetGoal */ = {
+			isa = PBXGroup;
+			children = (
+				51348A0B2A125FAD005F9163 /* PostGoal.swift */,
+			);
+			path = SetGoal;
+			sourceTree = "<group>";
+		};
+		512C4F652A3D7B4000C64F7F /* BatteryHistory */ = {
+			isa = PBXGroup;
+			children = (
+				512C4F662A3D7BB000C64F7F /* GetSevenDaysBatteryHistory.swift */,
+			);
+			path = BatteryHistory;
 			sourceTree = "<group>";
 		};
 		51348A082A124F9D005F9163 /* SetGoal */ = {
@@ -652,7 +672,6 @@
 				511AA1D82A100A4700DAF26A /* PostLogin.swift */,
 				511AA1DA2A100A9400DAF26A /* PostRegenerate.swift */,
 				51348A062A121C4D005F9163 /* GetValues.swift */,
-				51348A0B2A125FAD005F9163 /* PostGoal.swift */,
 				515617232A148A8000743B5F /* PostSignUp.swift */,
 				51720C8E2A15D8A2002E05AD /* PostSelectedValues.swift */,
 				51AA9A722A17C01F005C14FC /* PostBatteryVariation.swift */,
@@ -1145,6 +1164,7 @@
 				BE7C072B2A1B067100C7D647 /* ProjectEnergyView.swift in Sources */,
 				BE7C07212A1AFD7800C7D647 /* ProjectRegularAnswerTimeView.swift in Sources */,
 				515E26402A015957006C3FE5 /* RoundedCorner.swift in Sources */,
+				512C4F672A3D7BB000C64F7F /* GetSevenDaysBatteryHistory.swift in Sources */,
 				BE7C06FA2A14C59D00C7D647 /* ProjectEditModalView.swift in Sources */,
 				51A1E5C62A0F580A00404E11 /* BatteryHistoryView.swift in Sources */,
 				515E261B2A00E31B006C3FE5 /* FontExtension.swift in Sources */,
