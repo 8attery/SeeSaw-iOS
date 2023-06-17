@@ -40,6 +40,7 @@ struct SimpleEntry: TimelineEntry {
 
 struct SeeSawWidgetEntryView: View {
     @Environment(\.widgetFamily) private var widgetFamily
+//    @StateObject var batteryVM = BatteryViewModel()
 
     var entry: Provider.Entry
     
@@ -65,6 +66,11 @@ struct SeeSawWidgetEntryView: View {
         default:
             Text("?")
         }
+    }
+    
+    func fetchData() {
+//        batteryVM.getBattery { batteryInfo in
+//            battery = batteryInfo.battery
     }
 }
 
