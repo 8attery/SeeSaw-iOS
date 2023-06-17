@@ -207,13 +207,6 @@ struct FastChargeResult: Codable {
     let createdAt: String
 }
 
-struct PostEnergyResponse: Codable {
-    let isSuccess: Bool
-    let code: Int
-    let message: String
-    let result: Int
-}
-
 struct PostSleepResponse: Codable {
     let isSuccess: Bool
     let code: Int
