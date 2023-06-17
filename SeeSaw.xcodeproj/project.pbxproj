@@ -530,6 +530,8 @@
 			isa = PBXGroup;
 			children = (
 				512C4F6E2A3D7DE700C64F7F /* GetEmail.swift */,
+				515617232A148A8000743B5F /* PostSignUp.swift */,
+				51720C8E2A15D8A2002E05AD /* PostSelectedValues.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -713,8 +715,6 @@
 				512C4F6B2A3D7C6E00C64F7F /* MyPage */,
 				512C4F6C2A3D7D2E00C64F7F /* Auth */,
 				51348A062A121C4D005F9163 /* GetValues.swift */,
-				515617232A148A8000743B5F /* PostSignUp.swift */,
-				51720C8E2A15D8A2002E05AD /* PostSelectedValues.swift */,
 				51AA9A722A17C01F005C14FC /* PostBatteryVariation.swift */,
 				BEC54BC22A1E18F900C455DF /* GetCompleteProjectResponse.swift */,
 				BEC54BC42A1E196E00C455DF /* GetRegularReviewResponse.swift */,
