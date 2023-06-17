@@ -194,19 +194,6 @@ class BatteryViewModel: ObservableObject {
     }
 }
 
-struct GetMonthActivityHistory: Codable {
-    let isSuccess: Bool
-    let code: Int
-    let message: String
-    let result: [ActivityDayInfo]
-}
-
-struct ActivityDayInfo: Codable {
-    let day: Int
-    let activity: Int?
-    let color: Int?
-}
-
 struct GetMonthSleepHistory: Codable {
     let isSuccess: Bool
     let code: Int

@@ -43,6 +43,7 @@
 		512C4F5B2A3D798D00C64F7F /* PostEnergy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C4F5A2A3D798D00C64F7F /* PostEnergy.swift */; };
 		512C4F5D2A3D79DB00C64F7F /* PostSleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C4F5C2A3D79DB00C64F7F /* PostSleep.swift */; };
 		512C4F5F2A3D7A2800C64F7F /* PostFastCharge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C4F5E2A3D7A2800C64F7F /* PostFastCharge.swift */; };
+		512C4F612A3D7A6F00C64F7F /* GetMonthActivityHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C4F602A3D7A6F00C64F7F /* GetMonthActivityHistory.swift */; };
 		513297C42A1F58D5003F6852 /* ProjectReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513297C32A1F58D5003F6852 /* ProjectReportViewModel.swift */; };
 		51348A072A121C4D005F9163 /* GetValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51348A062A121C4D005F9163 /* GetValues.swift */; };
 		51348A0A2A1252E6005F9163 /* SetGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51348A092A1252E6005F9163 /* SetGoalViewModel.swift */; };
@@ -213,6 +214,7 @@
 		512C4F5A2A3D798D00C64F7F /* PostEnergy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEnergy.swift; sourceTree = "<group>"; };
 		512C4F5C2A3D79DB00C64F7F /* PostSleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSleep.swift; sourceTree = "<group>"; };
 		512C4F5E2A3D7A2800C64F7F /* PostFastCharge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFastCharge.swift; sourceTree = "<group>"; };
+		512C4F602A3D7A6F00C64F7F /* GetMonthActivityHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMonthActivityHistory.swift; sourceTree = "<group>"; };
 		513297C32A1F58D5003F6852 /* ProjectReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectReportViewModel.swift; sourceTree = "<group>"; };
 		51348A062A121C4D005F9163 /* GetValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetValues.swift; sourceTree = "<group>"; };
 		51348A092A1252E6005F9163 /* SetGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalViewModel.swift; sourceTree = "<group>"; };
@@ -463,6 +465,7 @@
 				512C4F5A2A3D798D00C64F7F /* PostEnergy.swift */,
 				512C4F5C2A3D79DB00C64F7F /* PostSleep.swift */,
 				512C4F5E2A3D7A2800C64F7F /* PostFastCharge.swift */,
+				512C4F602A3D7A6F00C64F7F /* GetMonthActivityHistory.swift */,
 			);
 			path = Battery;
 			sourceTree = "<group>";
@@ -1155,6 +1158,7 @@
 				510B32BF2A18000100026E07 /* DateHolder.swift in Sources */,
 				510B32C32A18005B00026E07 /* CalendarCell.swift in Sources */,
 				514852F22A039C8000351A9D /* LoginView.swift in Sources */,
+				512C4F612A3D7A6F00C64F7F /* GetMonthActivityHistory.swift in Sources */,
 				51348A0A2A1252E6005F9163 /* SetGoalViewModel.swift in Sources */,
 				BE7C07102A18AF4F00C7D647 /* InterimReviewMainView.swift in Sources */,
 				BE7C06DC2A0BA88E00C7D647 /* ValueYearView.swift in Sources */,
