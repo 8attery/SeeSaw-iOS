@@ -47,6 +47,7 @@
 		512C4F632A3D7AA600C64F7F /* GetMonthSleepHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C4F622A3D7AA600C64F7F /* GetMonthSleepHistory.swift */; };
 		512C4F672A3D7BB000C64F7F /* GetSevenDaysBatteryHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C4F662A3D7BB000C64F7F /* GetSevenDaysBatteryHistory.swift */; };
 		512C4F692A3D7BFD00C64F7F /* GetThirtyDaysBatteryHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C4F682A3D7BFD00C64F7F /* GetThirtyDaysBatteryHistory.swift */; };
+		512C4F6F2A3D7DE700C64F7F /* GetEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C4F6E2A3D7DE700C64F7F /* GetEmail.swift */; };
 		513297C42A1F58D5003F6852 /* ProjectReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513297C32A1F58D5003F6852 /* ProjectReportViewModel.swift */; };
 		51348A072A121C4D005F9163 /* GetValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51348A062A121C4D005F9163 /* GetValues.swift */; };
 		51348A0A2A1252E6005F9163 /* SetGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51348A092A1252E6005F9163 /* SetGoalViewModel.swift */; };
@@ -221,6 +222,7 @@
 		512C4F622A3D7AA600C64F7F /* GetMonthSleepHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMonthSleepHistory.swift; sourceTree = "<group>"; };
 		512C4F662A3D7BB000C64F7F /* GetSevenDaysBatteryHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSevenDaysBatteryHistory.swift; sourceTree = "<group>"; };
 		512C4F682A3D7BFD00C64F7F /* GetThirtyDaysBatteryHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThirtyDaysBatteryHistory.swift; sourceTree = "<group>"; };
+		512C4F6E2A3D7DE700C64F7F /* GetEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmail.swift; sourceTree = "<group>"; };
 		513297C32A1F58D5003F6852 /* ProjectReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectReportViewModel.swift; sourceTree = "<group>"; };
 		51348A062A121C4D005F9163 /* GetValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetValues.swift; sourceTree = "<group>"; };
 		51348A092A1252E6005F9163 /* SetGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGoalViewModel.swift; sourceTree = "<group>"; };
@@ -513,6 +515,25 @@
 			path = MyPage;
 			sourceTree = "<group>";
 		};
+		512C4F6C2A3D7D2E00C64F7F /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				512C4F6D2A3D7DD500C64F7F /* SignUp */,
+				511AA1D82A100A4700DAF26A /* PostLogin.swift */,
+				511AA1DA2A100A9400DAF26A /* PostRegenerate.swift */,
+				51DD38F32A1B76910058E2E4 /* GetNickname.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		512C4F6D2A3D7DD500C64F7F /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				512C4F6E2A3D7DE700C64F7F /* GetEmail.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		51348A082A124F9D005F9163 /* SetGoal */ = {
 			isa = PBXGroup;
 			children = (
@@ -690,13 +711,11 @@
 			children = (
 				512C4F572A3D78F400C64F7F /* Battery */,
 				512C4F6B2A3D7C6E00C64F7F /* MyPage */,
-				511AA1D82A100A4700DAF26A /* PostLogin.swift */,
-				511AA1DA2A100A9400DAF26A /* PostRegenerate.swift */,
+				512C4F6C2A3D7D2E00C64F7F /* Auth */,
 				51348A062A121C4D005F9163 /* GetValues.swift */,
 				515617232A148A8000743B5F /* PostSignUp.swift */,
 				51720C8E2A15D8A2002E05AD /* PostSelectedValues.swift */,
 				51AA9A722A17C01F005C14FC /* PostBatteryVariation.swift */,
-				51DD38F32A1B76910058E2E4 /* GetNickname.swift */,
 				BEC54BC22A1E18F900C455DF /* GetCompleteProjectResponse.swift */,
 				BEC54BC42A1E196E00C455DF /* GetRegularReviewResponse.swift */,
 				BEC54BC62A1E1A2700C455DF /* GetProjectDetailInfoResponse.swift */,
@@ -1223,6 +1242,7 @@
 				517532222A094DA400BF107D /* AuthViewModel.swift in Sources */,
 				BE7C07332A1B21F900C7D647 /* ProjectCalorieView.swift in Sources */,
 				51A9ECB52A00DD71000E6784 /* ColorExtension.swift in Sources */,
+				512C4F6F2A3D7DE700C64F7F /* GetEmail.swift in Sources */,
 				510B32B62A17F3AC00026E07 /* ActivityHistoryView.swift in Sources */,
 				514853012A04002E00351A9D /* ExplainValuesView.swift in Sources */,
 				510B32DD2A1A8FD700026E07 /* BatteryDashboardFastChargeView.swift in Sources */,
