@@ -1,13 +1,10 @@
 # ✳️ SeeSaw, 시소 ✳️
 
-```ipa 파일 위치```
-https://github.com/kusitms-com/27th_Meetup_T8_SeeSaw_ipa
+💻 Tech info - [Technology](https://github.com/anjiniii/SeeSaw-iOS#computer-technology)
 
-```Backend repository```
-https://github.com/kusitms-com/27th_Meetup_T8_SeeSaw_back
+<img src = "https://github.com/8attery/.github/assets/39361807/ed38220d-b143-470f-bc94-60505336e7ce" height="600">
 
-
-![image](https://github.com/8attery/.github/assets/39361807/ed38220d-b143-470f-bc94-60505336e7ce)
+<!-- ![image](https://github.com/8attery/.github/assets/39361807/ed38220d-b143-470f-bc94-60505336e7ce) -->
 
 ### **일과 삶 사이의 균형 찾기, SeeSaw**
 
